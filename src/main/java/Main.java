@@ -7,15 +7,20 @@ import java.util.Properties;
 
 public class Main {
     public static void main(String[] args) {
-        String inputFile = "/dev/null";
-        if (args.length > 0) {
-            inputFile = args[0];
-            System.out.println(inputFile);
+        if (args.length == 0) {
+            System.err.println("Must define one or more properties files as parameters.");
+            System.exit(1);
         }
 
-        Properties properties = readProperties(inputFile);
-        JSONObject jsonProperties = convertPropertiesToJson(properties);
-        returnJsonString(jsonProperties);
+        JSONObject jsonPropertiesObject = new JSONObject();
+
+        for (String inputFile : args) {
+            Properties properties = readProperties(inputFile);
+            JSONObject jsonProperties = convertPropertiesToJson(properties);
+            jsonPropertiesObject.put(inputFile, jsonProperties);
+        }
+
+        returnJsonString(jsonPropertiesObject);
     }
 
     private static Properties readProperties(String inputFile) {
