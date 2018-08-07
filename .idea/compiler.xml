@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="convert-properties-to-json" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="convert-properties-to-json" target="1.5" />
       <module name="java-properties-to-json" target="1.7" />
     </bytecodeTargetLevel>
   </component>
