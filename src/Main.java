@@ -23,7 +23,7 @@ public class Main {
         InputStream input;
 
         try {
-            input = new FileInputStream("/tmp/my.properties");
+            input = new FileInputStream(inputFile);
             properties.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -48,12 +48,6 @@ public class Main {
 
     private static void returnJsonString(JSONObject json) {
         String jsonString = json.toString(4);
-
-        /*try (FileWriter file = new FileWriter("/tmp/my.json")) {
-            file.write(jsonString);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
 
         System.out.println(jsonString);
     }
