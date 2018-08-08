@@ -10,8 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="convert-properties-to-json" target="1.5" />
-      <module name="java-properties-to-json" target="1.7" />
+      <module name="convert-properties-to-json" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

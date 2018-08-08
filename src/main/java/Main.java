@@ -32,7 +32,6 @@ public class Main {
             properties.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
-            System.exit(2);
         }
 
         return properties;
@@ -45,7 +44,6 @@ public class Main {
             jsonObject = new JSONObject(properties);
         } catch (JSONException jex) {
             jex.printStackTrace();
-            System.exit(3);
         }
 
         return jsonObject;

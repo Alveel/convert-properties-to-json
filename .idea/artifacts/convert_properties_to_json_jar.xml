@@ -3,7 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/convert_properties_to_json_jar</output-path>
     <root id="archive" name="convert-properties-to-json.jar">
       <element id="module-output" name="convert-properties-to-json" />
-      <element id="extracted-dir" path="$USER_HOME$/dl/json-20180130.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
